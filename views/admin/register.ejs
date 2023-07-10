@@ -1,0 +1,87 @@
+<main>
+    <div class="container">
+
+    
+        <section class="section">
+            <div class="row">
+              <div class="col-lg-3">
+              </div>
+        
+              <div class="col-lg-9 pt-5">
+              <div class="card mb-3">
+
+                <div class="card-body">
+
+                  <div class="pt-4 pb-2">
+                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
+                    <p class="text-center small">Enter your personal details to create account</p>
+                  </div>
+                  <% messages.forEach(element => { %>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <%= messages %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                    </div>
+                    <% }) %>
+                    
+
+                  <form class="needs-validation"  method="post" action="\admin\register">
+                    <div class="col-12">
+                      <label for="first_name" class="form-label">First Name</label>
+                      <input type="text" name="firstname" class="form-control" id="firstname" required>
+                      <div class="invalid-feedback">Enter your first name</div>
+                    </div>
+                   
+
+                    <div class="col-12">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" name="lastname" class="form-control" id="lastname" required>
+                        <div class="invalid-feedback">Enter your last name</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="email" class="form-label">Your Email</label>
+                      <input type="email" name="email" class="form-control" id="email" required>
+                      <div class="invalid-feedback">Enter your Email</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="phone" class="form-label">Phone</label>
+                      <div class="input-group has-validation">
+                        <input type="number" name="phone" class="form-control" id="phone" required>
+                        <div class="invalid-feedback">Enter your Phone number</div>
+                    </div>
+
+                    </div>
+                  
+                    <div class="col-12">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" id="password" required>
+                      <div class="invalid-feedback">Enter your password</div>
+                    </div>
+               
+                      <div class="col-12">
+                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                        <input type="password" name="password_confirmation" class="form-control" id="password_confirmation" required>
+                        <div class="invalid-feedback">Confirm your password</div>
+
+                    </div>
+                    <br>
+
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                    </div>
+                    <br>
+
+                  </form>
+
+                </div>
+              </div>
+
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main><!-- End #main -->
