@@ -33,8 +33,8 @@ router.get('/admin/dashboard',  authMiddleware,  (req, res) => {
 router.get('/admin/post',  authMiddleware, postController.index)
 router.get('/admin/post/create',  authMiddleware, postController.create)
 router.post('/admin/post',  authMiddleware, postController.store)
-router.get('/admin/post/:id',  authMiddleware, postController.edit)
-router.put('/admin/post/:id/edit',  authMiddleware, postController.update)
+router.get('/admin/post/:id/edit',  authMiddleware, postController.edit)
+router.put('/admin/post/:id',  authMiddleware, postController.update)
 router.delete('/admin/post/:id',  authMiddleware, postController.destroy)
 
 router.get('/admin', (req, res) => {
